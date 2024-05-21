@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+    background-color: aliceblue;
+}
+
+.mensaje--encriptado{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: fantasy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color:whitesmoke;
+}
