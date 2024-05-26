@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
-    <link rel="shortcut icon" href="IMÁGENES/Copia de logo2.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="STYLES/styles.css">
-    <link rel="stylesheet" href="STYLES/reset.css">
+    <title>Encriptador de texto Loreley</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="headerimg">
-            <div class="header_img">
-                <img src="IMÁGENES/ALURA LOGO.jpeg" alt="Logo de Alura">
+    <div class="container">
+        <div class="encriptar">
+            <textarea 
+            name="texto" 
+            class="texto" 
+            id="texto"
+            cols="30"
+            rows=10
+            placeholder="Ingresa eltexto aquí"
+            ></textarea>
+            <div clas="terminos">
+                <P> SOLO LETRAS MINUSCULAS Y SIN ACENTOS.</P>
             </div>
-            <h1 class="titulo">CHALLENGE ENCRIPTADOR</h1>
+            <div clas="botones">
+                <button class="btn-encriptar" type="buttom" onclick="encriptar()">
+                    Encriptar
+                </button>
+                <input 
+                    type="button"
+                    class="btn-desencriptar" 
+                    value="desencriptar" 
+                    onclick="desencriptar()">
+                </input>
+            </div>
+
+        </div>    
+        <div clas="encriptado">
+            <img src="IMÁGENES/sad frog.png" alt="" id="sad-frog">
+            <div clas="mensaje encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje"> Ningún mensaje encontrado</h2>
+                <P id="parrafo"> Ingresa el texto que deseas encriptar o desencriptar </P>
+                <textarea
+                    name="mensaje" 
+                    id="mensaje" 
+                    cols="30" 
+                    rows="10" 
+                    class="mensaje"> 
+                </textarea>
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="encriptar">
-                <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-                <div class="terminos">
-                    <img src="IMÁGENES/warningicon.png" alt="IMPORTANTE">
-                    <p id="warning">Solo letras minúsculas y sin acentos</p>
-                </div>
-                <div class="Buttons">
-                    <button class="btn--encriptar" type="button" onclick="encriptar()"> Encriptar</button>
-                    <button class="btn--desencriptar" type="button" onclick="desencriptar()"> Desencriptar</button>
-                </div> 
-            </div>
-            <div class="encriptado">
-                <img id="muñeco" src="IMÁGENES/sad frog.png" alt="sadFrog">
-                <div class="mensaje-encriptado" id="mensaje-encriptado">
-                    <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
-                    <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-                </div>
-            </div>
-        </div>
+
+    </div>
         
 
-    </main>
-    <script src="INDEX.js"></script>
-    <footer class="pie-pagina">
-        <div class="icon-container">
-            <a href="https://www.linkedin.com/in/karen-loreley-trejo-lim%C3%B2n-03759a2aa/" target="_blank" rel="noopener noreferrer">
-                <img src="IMÁGENES/linkedin sin fondo 2.png" class="linkedin" alt="icono Linkedin">
-            </a>
-            <a href="https://www.instagram.com/krnloreleytl/" target="_blank" rel="noopener noreferrer">
-                <img src="IMÁGENES/instagram sin fondo.png" class="instagram" alt="icono Instagram">
-            </a>
-            <a href="https://github.com/KLORELEY" target="_blank" rel="noopener noreferrer">
-                <img src="IMÁGENES/github cuadradosin fondo.png" class="github" alt="icono GitHub">
-            </a>
-        </div>
-    </footer>
-    
 </body>
-
+<script src="index.js"></script>
 </html>
