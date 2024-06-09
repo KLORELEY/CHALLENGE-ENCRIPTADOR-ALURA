@@ -1,54 +1,86 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
+
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background: #f3f5fc;
 }
 
-
-.container{
-    position:relative;
+header {
     width: 100%;
-    height: 100%;
-    background:#f3f5fc;
-
+    background: #0a3871;
 }
 
-.texto{
+.headerimg {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.header_img {
+    position: absolute;
+    left: 10px;
+}
+
+.header_img img {
+    height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+    width: auto;
+}
+
+.titulo {
+    margin: 0 auto;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 24px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f3f5fc;
+    padding-top: 130px; /* Asegura que el contenido no se superponga con el header */
+}
+
+.texto {
     position: absolute;
     width: 42%;
     height: 60%;
-    left:12%;
-    top:15%;
+    left: 12%;
+    top: 15%;
     border: none;
     font-family: fantasy;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-    background-color:#f3f5fc;
+    background-color: #f3f5fc;
 }
 
-.texto::placeholder{
-  color: #0a3871;
-
+.texto::placeholder {
+    color: #0a3871;
 }
 
 .texto:focus,
 .texto:active {
-    border:none;
+    border: none;
     outline: none;
 }
 
-.terminos{
+.terminos {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,39 +98,41 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
-    color: #495057;
+    color: red;
     opacity: 0.8;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
+
 .botones {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding:1% 0;
+    padding: 1% 0;
     position: absolute;
     width: 80%;
-    left:12%;
-    top:82%;
+    left: 12%;
+    top: 82%;
+    gap: 10px; /* Añadido espacio entre botones */
 }
 
-.btn-encriptar{
-  align-items: center;
-  justify-content: center;
-  padding: 2%;
-  gap: 8px;
-  width: 25%;
-  background-color:#0a3871;
-  border-radius: 24px;
-  font-family: fantasy;
-  font-size: 18px;
-  line-height: 19px;
-  text-align: center;
-  color:#fff;
+.btn-encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    font-family: fantasy;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
 }
 
-.btn-desencriptar{
+.btn-desencriptar {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -113,21 +147,21 @@ body {
     font-family: fantasy;
     font-weight: 400;
     font-size: 18px;
-    line-height: 19px;text-align: center;
+    line-height: 19px;
+    text-align: center;
     color: #0a3871;
-
 }
 
 .btn-encriptar:hover,
-.btn-desencriptar:hover{
+.btn-desencriptar:hover {
     margin: 0.3%;
     width: 24.5%;
     padding: 1.8%;
 }
 
-.encriptado{
+.encriptado {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     position: absolute;
     width: 30%;
     height: 90%;
@@ -138,30 +172,30 @@ body {
     border-radius: 32px;
 }
 
-.mensaje-encriptado{
+.mensaje-encriptado {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1%;
-    gap:16px;
+    gap: 16px;
     position: absolute;
     width: 100%;
-    top:65%;
+    top: 65%;
     text-align: center;
 }
 
-.mensaje-encriptado h2{
+.mensaje-encriptado h2 {
     width: 60%;
     font-family: fantasy;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
     text-align: center;
-    color:#495057;
+    color: #495057;
 }
 
-.mensaje-encriptado p{
+.mensaje-encriptado p {
     width: 80%;
     font-family: fantasy;
     font-style: normal;
@@ -169,74 +203,149 @@ body {
     font-size: 16px;
     line-height: 150%;
     text-align: center;
-    color:#495057
+    color: #495057;
 }
 
-.encriptado img{
+.encriptado img {
     position: absolute;
     width: 80%;
     height: 50%;
-    top:15%;
+    top: 15%;
 }
 
+/* Responsive design */
 
-/*Responsive design*/
-
-@media (max-width 57.5em){
-    .container{
+@media (max-width: 57.5em) {
+    .container {
         display: flex;
         flex-direction: row;
     }
 
-    .encriptar{
+    .encriptar {
         width: 100%;
     }
 
-    .texto{
+    .texto {
         width: 80%;
         height: 60%;
         left: 10%;
-        top:5%
+        top: 5%;
     }
 
-    .terminos p{
+    .terminos p {
         font-size: 16px;
     }
 
-    .terminos{
+    .terminos {
         width: 80%;
-        left:10%;
-        top:70%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .botones {
+        width: 80%;
+        left: 10%;
+        top: 72%;
+        gap: 10px; /* Añadido espacio entre botones */
     }
 
     .btn-encriptar,
-    .btn-desencriptar{
+    .btn-desencriptar {
         width: 48%;
         border-radius: 16px;
     }
 
-    .btn-encriptar:hover,.btn-desencriptar:hover{
+    .btn-encriptar:hover,
+    .btn-desencriptar:hover {
         margin: 0.3%;
         width: 47.5%;
-        padding:1.8%;
+        padding: 1.8%;
     }
 
-    .encriptado{
+    .encriptado {
         width: 80%;
         height: 15%;
-        left:10%;
-        top:80%
+        left: 10%;
+        top: 80%;
     }
 
-    .mensaje-encriptado{
+    .mensaje-encriptado {
         width: 100%;
-        top:5%;
+        top: 5%;
     }
-    .encriptado img{
+
+    .encriptado img {
         top: 0;
         display: none;
         visibility: hidden;
     }
+}
 
+@media (max-width: 767px) { /* Para dispositivos móviles */
+    .header_img img {
+        height: 60px; /* Ajusta la altura de la imagen según sea necesario */
+    }
 
+    .titulo {
+        font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
+    }
+
+    .container {
+        padding-top: 100px; /* Ajusta el padding según sea necesario */
+    }
+
+    .texto {
+        width: 80%;
+        height: 40%;
+        left: 10%;
+        top: 20%;
+        font-size: 24px;
+    }
+
+    .terminos {
+        top: 65%;
+        left: 10%;
+    }
+
+    .botones {
+        top: 70%;
+        left: 10%;
+        gap: 10px; /* Añadido espacio entre botones */
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 45%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .btn-encriptar:hover,
+    .btn-desencriptar:hover {
+        width: 44.5%;
+    }
+
+    .encriptado {
+        width: 80%;
+        height: auto;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensaje-encriptado {
+        width: 90%;
+        top: 10%;
+    }
+
+    .mensaje-encriptado h2 {
+        font-size: 20px;
+    }
+
+    .mensaje-encriptado p {
+        font-size: 14px;
+    }
+
+    .encriptado img {
+        display: none;
+    }
 }
